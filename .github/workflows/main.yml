@@ -24,5 +24,4 @@ jobs:
 
       - name: Show Windows OS version
         run: |
-          echo
           systeminfo | findstr /B /C:"OS Name" /C:"OS Version"
