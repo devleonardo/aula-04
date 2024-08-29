@@ -1,0 +1,18 @@
+name: Workflow
+on:
+  push:
+    branches:
+      - main
+jobs:
+  JobLinux:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Show README.mb content
+      run: cat README.md
+
+    - name: Check Kernel version
+      run: uname -r 
