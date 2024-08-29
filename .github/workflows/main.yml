@@ -1,8 +1,6 @@
 name: Workflow
-on:
-  push:
-    branches:
-      - main
+on: push
+
 jobs:
   JobLinux:
     runs-on: ubuntu-latest
