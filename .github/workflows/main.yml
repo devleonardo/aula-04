@@ -14,3 +14,13 @@ jobs:
 
     - name: Check Kernel version
       run: uname -r 
+
+  JobWindows:
+      runs-on: windows-latest
+
+      steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Show Windows OS version
+        run: echo "OS Version- " && systeminfo | findstr /B /C:"OS Name" /C:"OS Version"
